@@ -7,15 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32DF0E2164B5C2C003508B9 /* FbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF0E1164B5C2C003508B9 /* FbViewController.m */; };
+		A32DF1CE1655C7A4003508B9 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1B61655C7A4003508B9 /* NSObject+SBJson.m */; };
+		A32DF1CF1655C7A4003508B9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1B91655C7A4003508B9 /* SBJsonParser.m */; };
+		A32DF1D01655C7A4003508B9 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1BB1655C7A4003508B9 /* SBJsonStreamParser.m */; };
+		A32DF1D11655C7A4003508B9 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1BD1655C7A4003508B9 /* SBJsonStreamParserAccumulator.m */; };
+		A32DF1D21655C7A4003508B9 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1BF1655C7A4003508B9 /* SBJsonStreamParserAdapter.m */; };
+		A32DF1D31655C7A4003508B9 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1C11655C7A4003508B9 /* SBJsonStreamParserState.m */; };
+		A32DF1D41655C7A4003508B9 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1C31655C7A4003508B9 /* SBJsonStreamWriter.m */; };
+		A32DF1D51655C7A4003508B9 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1C51655C7A4003508B9 /* SBJsonStreamWriterAccumulator.m */; };
+		A32DF1D61655C7A4003508B9 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1C71655C7A4003508B9 /* SBJsonStreamWriterState.m */; };
+		A32DF1D71655C7A4003508B9 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1C91655C7A4003508B9 /* SBJsonTokeniser.m */; };
+		A32DF1D81655C7A4003508B9 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1CB1655C7A4003508B9 /* SBJsonUTF8Stream.m */; };
+		A32DF1D91655C7A4003508B9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DF1CD1655C7A4003508B9 /* SBJsonWriter.m */; };
 		A3DA795C16410C3B001047F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DA795B16410C3B001047F9 /* UIKit.framework */; };
 		A3DA795E16410C3B001047F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DA795D16410C3B001047F9 /* Foundation.framework */; };
 		A3DA796016410C3B001047F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DA795F16410C3B001047F9 /* CoreGraphics.framework */; };
 		A3DA796616410C3B001047F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DA796416410C3B001047F9 /* InfoPlist.strings */; };
 		A3DA796816410C3B001047F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA796716410C3B001047F9 /* main.m */; };
 		A3DA796C16410C3B001047F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA796B16410C3B001047F9 /* AppDelegate.m */; };
+		A3DA797616410EB7001047F9 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA797516410EB7001047F9 /* CanvasView.m */; };
+		A3DA797D16410ED8001047F9 /* Pallet.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA797816410ED8001047F9 /* Pallet.m */; };
+		A3DA797E16410ED8001047F9 /* TargetActionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA797A16410ED8001047F9 /* TargetActionHandler.m */; };
+		A3DA797F16410ED8001047F9 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA797C16410ED8001047F9 /* Button.m */; };
+		A3DA798116411142001047F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DA798016411142001047F9 /* QuartzCore.framework */; };
+		A3DA798F16412386001047F9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DA798E16412386001047F9 /* libicucore.dylib */; };
+		A3DA799116412394001047F9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DA799016412394001047F9 /* CFNetwork.framework */; };
+		A3DA79931641239C001047F9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DA79921641239C001047F9 /* Security.framework */; };
+		A3EB1D2F165663B600345CE9 /* libSocketRocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EB1D281656637100345CE9 /* libSocketRocket.a */; };
+		A3F285611647466B009C4211 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F285601647466B009C4211 /* Default-568h@2x.png */; };
+		A3F285B8164B3AFF009C4211 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F285B7164B3AFF009C4211 /* Social.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A3EB1D271656637100345CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A32DF0E3164B76C8003508B9 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6B2082D1450F597009315AF;
+			remoteInfo = SocketRocket;
+		};
+		A3EB1D291656637100345CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A32DF0E3164B76C8003508B9 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F668C880153E91210044DBAC;
+			remoteInfo = SocketRocketOSX;
+		};
+		A3EB1D2B1656637100345CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A32DF0E3164B76C8003508B9 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6BDA802145900D200FE3253;
+			remoteInfo = SRWebSocketTests;
+		};
+		A3EB1D2D1656637100345CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A32DF0E3164B76C8003508B9 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F62417E314D52F3C003CE997;
+			remoteInfo = TestChat;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A32DF0E0164B5C2C003508B9 /* FbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FbViewController.h; sourceTree = "<group>"; };
+		A32DF0E1164B5C2C003508B9 /* FbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FbViewController.m; sourceTree = "<group>"; };
+		A32DF0E3164B76C8003508B9 /* SocketRocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SocketRocket.xcodeproj; path = "square-SocketRocket-99f58c7 3/SocketRocket.xcodeproj"; sourceTree = "<group>"; };
+		A32DF1B51655C7A4003508B9 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		A32DF1B61655C7A4003508B9 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		A32DF1B71655C7A4003508B9 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		A32DF1B81655C7A4003508B9 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		A32DF1B91655C7A4003508B9 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		A32DF1BA1655C7A4003508B9 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		A32DF1BB1655C7A4003508B9 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		A32DF1BC1655C7A4003508B9 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		A32DF1BD1655C7A4003508B9 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		A32DF1BE1655C7A4003508B9 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		A32DF1BF1655C7A4003508B9 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		A32DF1C01655C7A4003508B9 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		A32DF1C11655C7A4003508B9 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		A32DF1C21655C7A4003508B9 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		A32DF1C31655C7A4003508B9 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		A32DF1C41655C7A4003508B9 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		A32DF1C51655C7A4003508B9 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		A32DF1C61655C7A4003508B9 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		A32DF1C71655C7A4003508B9 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		A32DF1C81655C7A4003508B9 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		A32DF1C91655C7A4003508B9 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		A32DF1CA1655C7A4003508B9 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		A32DF1CB1655C7A4003508B9 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		A32DF1CC1655C7A4003508B9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		A32DF1CD1655C7A4003508B9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		A3DA795716410C3B001047F9 /* CanvasWithPallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasWithPallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA795B16410C3B001047F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3DA795D16410C3B001047F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -26,6 +109,20 @@
 		A3DA796916410C3B001047F9 /* CanvasWithPallet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasWithPallet-Prefix.pch"; sourceTree = "<group>"; };
 		A3DA796A16410C3B001047F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A3DA796B16410C3B001047F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A3DA797416410EB7001047F9 /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		A3DA797516410EB7001047F9 /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		A3DA797716410ED8001047F9 /* Pallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pallet.h; sourceTree = "<group>"; };
+		A3DA797816410ED8001047F9 /* Pallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pallet.m; sourceTree = "<group>"; };
+		A3DA797916410ED8001047F9 /* TargetActionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetActionHandler.h; sourceTree = "<group>"; };
+		A3DA797A16410ED8001047F9 /* TargetActionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetActionHandler.m; sourceTree = "<group>"; };
+		A3DA797B16410ED8001047F9 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		A3DA797C16410ED8001047F9 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
+		A3DA798016411142001047F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3DA798E16412386001047F9 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		A3DA799016412394001047F9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A3DA79921641239C001047F9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A3F285601647466B009C4211 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A3F285B7164B3AFF009C4211 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +130,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EB1D2F165663B600345CE9 /* libSocketRocket.a in Frameworks */,
+				A3F285B8164B3AFF009C4211 /* Social.framework in Frameworks */,
+				A3DA79931641239C001047F9 /* Security.framework in Frameworks */,
+				A3DA799116412394001047F9 /* CFNetwork.framework in Frameworks */,
+				A3DA798F16412386001047F9 /* libicucore.dylib in Frameworks */,
+				A3DA798116411142001047F9 /* QuartzCore.framework in Frameworks */,
 				A3DA795C16410C3B001047F9 /* UIKit.framework in Frameworks */,
 				A3DA795E16410C3B001047F9 /* Foundation.framework in Frameworks */,
 				A3DA796016410C3B001047F9 /* CoreGraphics.framework in Frameworks */,
@@ -42,10 +145,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32DF0DF164B5BE3003508B9 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				A32DF0E0164B5C2C003508B9 /* FbViewController.h */,
+				A32DF0E1164B5C2C003508B9 /* FbViewController.m */,
+			);
+			name = Social;
+			sourceTree = "<group>";
+		};
+		A32DF1B41655C7A4003508B9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A32DF1B51655C7A4003508B9 /* NSObject+SBJson.h */,
+				A32DF1B61655C7A4003508B9 /* NSObject+SBJson.m */,
+				A32DF1B71655C7A4003508B9 /* SBJson.h */,
+				A32DF1B81655C7A4003508B9 /* SBJsonParser.h */,
+				A32DF1B91655C7A4003508B9 /* SBJsonParser.m */,
+				A32DF1BA1655C7A4003508B9 /* SBJsonStreamParser.h */,
+				A32DF1BB1655C7A4003508B9 /* SBJsonStreamParser.m */,
+				A32DF1BC1655C7A4003508B9 /* SBJsonStreamParserAccumulator.h */,
+				A32DF1BD1655C7A4003508B9 /* SBJsonStreamParserAccumulator.m */,
+				A32DF1BE1655C7A4003508B9 /* SBJsonStreamParserAdapter.h */,
+				A32DF1BF1655C7A4003508B9 /* SBJsonStreamParserAdapter.m */,
+				A32DF1C01655C7A4003508B9 /* SBJsonStreamParserState.h */,
+				A32DF1C11655C7A4003508B9 /* SBJsonStreamParserState.m */,
+				A32DF1C21655C7A4003508B9 /* SBJsonStreamWriter.h */,
+				A32DF1C31655C7A4003508B9 /* SBJsonStreamWriter.m */,
+				A32DF1C41655C7A4003508B9 /* SBJsonStreamWriterAccumulator.h */,
+				A32DF1C51655C7A4003508B9 /* SBJsonStreamWriterAccumulator.m */,
+				A32DF1C61655C7A4003508B9 /* SBJsonStreamWriterState.h */,
+				A32DF1C71655C7A4003508B9 /* SBJsonStreamWriterState.m */,
+				A32DF1C81655C7A4003508B9 /* SBJsonTokeniser.h */,
+				A32DF1C91655C7A4003508B9 /* SBJsonTokeniser.m */,
+				A32DF1CA1655C7A4003508B9 /* SBJsonUTF8Stream.h */,
+				A32DF1CB1655C7A4003508B9 /* SBJsonUTF8Stream.m */,
+				A32DF1CC1655C7A4003508B9 /* SBJsonWriter.h */,
+				A32DF1CD1655C7A4003508B9 /* SBJsonWriter.m */,
+			);
+			name = Classes;
+			path = "json-framework/Classes";
+			sourceTree = "<group>";
+		};
 		A3DA794C16410C3B001047F9 = {
 			isa = PBXGroup;
 			children = (
+				A32DF0E3164B76C8003508B9 /* SocketRocket.xcodeproj */,
+				A3F285601647466B009C4211 /* Default-568h@2x.png */,
 				A3DA796116410C3B001047F9 /* CanvasWithPallet */,
+				A3DA797216410D76001047F9 /* Canvas */,
+				A3DA797316410D95001047F9 /* Pallet */,
+				A32DF0DF164B5BE3003508B9 /* Social */,
+				A3DA798216412298001047F9 /* lib */,
 				A3DA795A16410C3B001047F9 /* Frameworks */,
 				A3DA795816410C3B001047F9 /* Products */,
 			);
@@ -62,6 +213,11 @@
 		A3DA795A16410C3B001047F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3F285B7164B3AFF009C4211 /* Social.framework */,
+				A3DA79921641239C001047F9 /* Security.framework */,
+				A3DA799016412394001047F9 /* CFNetwork.framework */,
+				A3DA798E16412386001047F9 /* libicucore.dylib */,
+				A3DA798016411142001047F9 /* QuartzCore.framework */,
 				A3DA795B16410C3B001047F9 /* UIKit.framework */,
 				A3DA795D16410C3B001047F9 /* Foundation.framework */,
 				A3DA795F16410C3B001047F9 /* CoreGraphics.framework */,
@@ -88,6 +244,47 @@
 				A3DA796916410C3B001047F9 /* CanvasWithPallet-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3DA797216410D76001047F9 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA797416410EB7001047F9 /* CanvasView.h */,
+				A3DA797516410EB7001047F9 /* CanvasView.m */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		A3DA797316410D95001047F9 /* Pallet */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA797716410ED8001047F9 /* Pallet.h */,
+				A3DA797816410ED8001047F9 /* Pallet.m */,
+				A3DA797916410ED8001047F9 /* TargetActionHandler.h */,
+				A3DA797A16410ED8001047F9 /* TargetActionHandler.m */,
+				A3DA797B16410ED8001047F9 /* Button.h */,
+				A3DA797C16410ED8001047F9 /* Button.m */,
+			);
+			path = Pallet;
+			sourceTree = "<group>";
+		};
+		A3DA798216412298001047F9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A32DF1B41655C7A4003508B9 /* Classes */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		A3EB1D211656637100345CE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3EB1D281656637100345CE9 /* libSocketRocket.a */,
+				A3EB1D2A1656637100345CE9 /* SocketRocket.framework */,
+				A3EB1D2C1656637100345CE9 /* SRWebSocketTests.octest */,
+				A3EB1D2E1656637100345CE9 /* TestChat.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +326,12 @@
 			mainGroup = A3DA794C16410C3B001047F9;
 			productRefGroup = A3DA795816410C3B001047F9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A3EB1D211656637100345CE9 /* Products */;
+					ProjectRef = A32DF0E3164B76C8003508B9 /* SocketRocket.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A3DA795616410C3B001047F9 /* CanvasWithPallet */,
@@ -136,12 +339,44 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A3EB1D281656637100345CE9 /* libSocketRocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSocketRocket.a;
+			remoteRef = A3EB1D271656637100345CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3EB1D2A1656637100345CE9 /* SocketRocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SocketRocket.framework;
+			remoteRef = A3EB1D291656637100345CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3EB1D2C1656637100345CE9 /* SRWebSocketTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SRWebSocketTests.octest;
+			remoteRef = A3EB1D2B1656637100345CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3EB1D2E1656637100345CE9 /* TestChat.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestChat.app;
+			remoteRef = A3EB1D2D1656637100345CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A3DA795516410C3B001047F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A3DA796616410C3B001047F9 /* InfoPlist.strings in Resources */,
+				A3F285611647466B009C4211 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +389,23 @@
 			files = (
 				A3DA796816410C3B001047F9 /* main.m in Sources */,
 				A3DA796C16410C3B001047F9 /* AppDelegate.m in Sources */,
+				A3DA797616410EB7001047F9 /* CanvasView.m in Sources */,
+				A3DA797D16410ED8001047F9 /* Pallet.m in Sources */,
+				A3DA797E16410ED8001047F9 /* TargetActionHandler.m in Sources */,
+				A3DA797F16410ED8001047F9 /* Button.m in Sources */,
+				A32DF0E2164B5C2C003508B9 /* FbViewController.m in Sources */,
+				A32DF1CE1655C7A4003508B9 /* NSObject+SBJson.m in Sources */,
+				A32DF1CF1655C7A4003508B9 /* SBJsonParser.m in Sources */,
+				A32DF1D01655C7A4003508B9 /* SBJsonStreamParser.m in Sources */,
+				A32DF1D11655C7A4003508B9 /* SBJsonStreamParserAccumulator.m in Sources */,
+				A32DF1D21655C7A4003508B9 /* SBJsonStreamParserAdapter.m in Sources */,
+				A32DF1D31655C7A4003508B9 /* SBJsonStreamParserState.m in Sources */,
+				A32DF1D41655C7A4003508B9 /* SBJsonStreamWriter.m in Sources */,
+				A32DF1D51655C7A4003508B9 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				A32DF1D61655C7A4003508B9 /* SBJsonStreamWriterState.m in Sources */,
+				A32DF1D71655C7A4003508B9 /* SBJsonTokeniser.m in Sources */,
+				A32DF1D81655C7A4003508B9 /* SBJsonUTF8Stream.m in Sources */,
+				A32DF1D91655C7A4003508B9 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +477,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CanvasWithPallet/CanvasWithPallet-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SocketRocket/**";
 				INFOPLIST_FILE = "CanvasWithPallet/CanvasWithPallet-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -236,7 +490,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CanvasWithPallet/CanvasWithPallet-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SocketRocket/**";
 				INFOPLIST_FILE = "CanvasWithPallet/CanvasWithPallet-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -261,6 +517,7 @@
 				A3DA797116410C3B001047F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class CanvasView;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    CanvasView *canvasview;
+    UISlider *slider;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) CanvasView *canvasview;
 
 @end
