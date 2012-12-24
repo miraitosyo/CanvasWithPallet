@@ -12,17 +12,19 @@
 
 @implementation CanvasView
 
-@synthesize penColor, penColorX, penWidth, penWidthX;
+@synthesize penColor, penColorX, penWidth, penWidthX, userID;
+
+BOOL hoge = YES;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+                
         // 描画スタイルのデフォルト設定
         penWidth = 3;
         self.penColor = [UIColor redColor];
-
+        
         // websocketサーバーに接続
         socket = [[SRWebSocket alloc] initWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://54.248.80.194:8080/"]]];
         
@@ -33,7 +35,12 @@
     return self;
 }
 
-- (UIImage *)image
+- (void)wsClose
+{
+    [socket close];
+}
+
+- (UIImage*)getImage
 {
     return canvas;
 }
@@ -53,6 +60,12 @@
     [canvas retain];
     UIGraphicsEndImageContext();
     [self setNeedsDisplay];
+}
+
+- (void)clearImage
+{
+    UIImage *clearImage = nil;
+    [self setImage:clearImage];
 }
 
 // 描画処理（自分）
@@ -113,7 +126,7 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    //canvas = [self canvasImage];
+    // キャンバスの表示位置設定
     [canvas drawAtPoint:CGPointMake(0, 0)];
 }
 
@@ -123,7 +136,6 @@
     curtPt = [touch locationInView:self];
     NSString *touchBegan = [NSString stringWithFormat:@"{\"x\":\"%lf\",\"y\":\"%lf\",\"z\":\"began\",\"penWidth\":\"%lf\",\"penColor\":\"%@\"}",
                             curtPt.x, curtPt.y, penWidth, penColor];
-    //NSString *touchBegan = [NSString stringWithFormat:@"{\"x\":\"%lf\",\"y\":\"%lf\",\"z\":\"began\"}", curtPt.x, curtPt.y];
 
     [socket send:touchBegan];
 }
@@ -170,8 +182,15 @@
 
 // サーバーから他クライアントの描画情報を受信したとき
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message{
-
-    [self otherPlayerDraw:[message JSONValue]];
+/*
+    if(hoge){
+        
+        NSLog(@"ユーザID = %@", [message JSONValue]);
+        hoge = FALSE;
+    }else{
+*/
+        [self otherPlayerDraw:[message JSONValue]];
+    //}
 }
 
 // 接続に失敗したとき
@@ -180,8 +199,18 @@
     NSLog(@"接続失敗");
 }
 
+// 接続を切ったとき
+- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
+{
+    NSLog(@"切断成功");
+    socket = nil;
+}
+
+
 // 他クライアントが描画したとき
 - (void)otherPlayerDraw:(NSArray *)drawingPoints{
+    
+    NSLog(@"hogeeeee");
     
     for (int i = 0; i < [drawingPoints count]; i++) {
         
@@ -210,6 +239,7 @@
             NSLog(@"x = %f : y = %f", [[drawingPoint objectForKey:@"x"] doubleValue], [[drawingPoint objectForKey:@"y"] doubleValue]);
             
         }
+        
 
     }
 }

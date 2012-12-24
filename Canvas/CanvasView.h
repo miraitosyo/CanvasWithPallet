@@ -30,8 +30,11 @@
 // ペンの太さ（他クライアント）
 @property(assign) float penWidthX;
 
+@property (nonatomic, assign) NSInteger userID;
 
-- (UIImage*)image;
+- (void)wsClose;
+- (UIImage*)getImage;
 - (void)setImage:(UIImage *)image;
+- (void)clearImage;
 
 @end
